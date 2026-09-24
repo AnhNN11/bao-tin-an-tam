@@ -4,9 +4,9 @@ Reviewed 24 September 2026. Scope: this Next.js application, not the production 
 
 ## Actual inventory
 
-No analytics, marketing pixels, third-party embeds or optional cookie libraries are installed. Fonts are built locally by next/font; image requests are same-origin. The preference widget does not grant analytics/marketing consent and must not be used as a signal authorizing future trackers.
+Vercel Speed Insights v2 is available behind a separate, default-off performance opt-in. No marketing pixels or third-party embeds are installed. Fonts are built locally by next/font; image requests are same-origin. The widget does not grant marketing consent.
 
-Only after an explicit save action, `btat:privacy:v1` is written to localStorage, containing version, necessary-only mode, savedAt and expiresAt. It remains client-local; there is no server-side consent ledger because no optional personal-data processing is authorized by this widget. Retention is a product choice of 180 days, not a claim that law mandates that duration. Expired or malformed records are cleared on subsequent load. No storage is written for declining or dismissing; browsing remains available even when browser storage is disabled.
+Only after an explicit save action, `btat:privacy:v1` is written to localStorage, containing policy version 2, necessary-only or performance mode, the performance opt-in flag, savedAt and expiresAt. Preference evidence remains client-local; there is no server-side consent ledger. When performance is enabled, the SDK sends performance metrics and technical context to Vercel, with query strings and fragments removed from URLs. Retention is a product choice of 180 days, not a claim that law mandates that duration. Expired or malformed records are cleared on subsequent load. No storage is written for declining or dismissing; browsing remains available even when browser storage is disabled.
 
 Footer settings support deletion, preference editing, keyboard dismissal and focus restoration. Cross-tab storage changes are reflected. The policy page distinguishes localStorage from HTTP cookies and explains the email-draft form and third-party links.
 
@@ -19,4 +19,4 @@ Footer settings support deletion, preference editing, keyboard dismissal and foc
 
 ## Deployment boundary
 
-A banner alone does not certify business-wide legal compliance. Before production, verify hosting/access-log collection and retention against the operator's actual configuration. Adding analytics, ads, embedded services or backend lead collection requires an updated data inventory, specific notices, purpose-specific prior consent where applicable, appropriate consent evidence and withdrawal handling. Do not treat this necessary-only preference as consent for those purposes or for insurance processing or marketing. No optional trackers may be added outside a properly reviewed consent gate.
+A banner alone does not certify business-wide legal compliance. Before production, verify hosting/access-log collection and retention against the operator's actual configuration. Adding analytics, ads, embedded services or backend lead collection requires an updated data inventory, specific notices, purpose-specific prior consent where applicable, appropriate consent evidence and withdrawal handling. Do not treat this necessary-only preference as consent for those purposes or for insurance processing or marketing. No additional trackers may be added outside a properly reviewed consent gate. See performance-review.md for the current measurement integration and deployment checks.

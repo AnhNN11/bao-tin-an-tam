@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { productCards } from "../lib/products";
 import ProductGrid from "../components/product-grid";
 import { CTA, Eyebrow, FAQ } from "../components/ui";
 export const metadata: Metadata = { title: "Giải pháp bảo hiểm" };
@@ -34,7 +35,7 @@ export default function ProductsPage() {
             <h2>Bạn cần bảo vệ điều gì?</h2>
             <p>Khám phá từng giải pháp, hiểu rõ từng lựa chọn.</p>
           </div>
-          <ProductGrid />
+          <ProductGrid products={productCards} />
           <p className="legal-note">
             Thông tin giới thiệu mang tính tổng quan. Phạm vi, quyền lợi, điều
             kiện và mức phí áp dụng theo quy tắc, điều khoản của từng sản phẩm.

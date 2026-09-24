@@ -2,13 +2,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { products } from "../lib/products";
+
 import Icon from "./ui-icon";
 
 export default function ProductGrid({
   compact = false,
+  products,
 }: {
   compact?: boolean;
+  products: { slug: string; name: string; group: string; tone: string; image: string; desc: string }[];
 }) {
   const [filter, setFilter] = useState("Tất cả");
   const shown = products.filter(
@@ -60,7 +62,7 @@ export default function ProductGrid({
                 fill
                 sizes={
                   compact
-                    ? "(max-width: 600px) 240px, (max-width: 850px) 45vw, 25vw"
+                    ? "(max-width: 600px) 240px, (max-width: 850px) 45vw, (max-width: 1280px) 23vw, 304px"
                     : "(max-width: 600px) 240px, (max-width: 850px) 280px, 360px"
                 }
               />

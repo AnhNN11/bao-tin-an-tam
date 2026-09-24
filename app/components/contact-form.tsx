@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
 import Icon from "./ui-icon";
-import { products } from "../lib/products";
+
 export default function ContactForm({
   initialProduct = "",
+  products,
 }: {
   initialProduct?: string;
+  products: { slug: string; name: string }[];
 }) {
   const [topic, setTopic] = useState(initialProduct);
   const [prepared, setPrepared] = useState(false);

@@ -4,7 +4,7 @@ import { getImageProps } from "next/image";
 export default function HeroPicture() {
   const common = {
     alt: "Minh họa gia đình Việt Nam tận hưởng thời gian bên nhau trong công viên",
-    quality: 85,
+    quality: 75,
     loading: "eager" as const,
     fetchPriority: "high" as const,
   };
@@ -13,14 +13,14 @@ export default function HeroPicture() {
     src: "/images/family-hero-v2.webp",
     width: 1536,
     height: 1024,
-    sizes: "100vw",
+    sizes: "(max-width: 1920px) 100vw, 1920px",
   });
   const { props: mobile } = getImageProps({
     ...common,
     src: "/images/family-mobile.webp",
     width: 1024,
     height: 1536,
-    sizes: "600px",
+    sizes: "512px",
   });
 
   return (

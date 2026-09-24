@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { productCards, productOptions } from "./lib/products";
 import HeroPicture from "./components/hero-picture";
 import Link from "next/link";
 import Icon from "./components/ui-icon";
@@ -114,7 +115,7 @@ export default function Home() {
               Tìm giải pháp phù hợp với cuộc sống của bạn.
             </p>
           </div>
-          <ProductGrid compact />
+          <ProductGrid compact products={productCards} />
         </div>
       </section>
       <section className="section editorial-home">
@@ -124,7 +125,7 @@ export default function Home() {
               src="/images/consultation.webp"
               alt="Minh họa buổi tư vấn bảo hiểm cùng khách hàng Việt Nam"
               fill
-              sizes="(max-width:700px) 100vw, 50vw"
+              sizes="(max-width:700px) 100vw, (max-width:1280px) 45vw, 580px"
             />
             <span className="editorial-photo-tag">
               <Icon name="shield" size={22} /> Sự an tâm bắt đầu từ thấu hiểu.
@@ -272,7 +273,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <ContactForm />
+          <ContactForm products={productOptions} />
         </div>
       </section>
       <section className="section">

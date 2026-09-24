@@ -50,3 +50,11 @@ Logo và sáu nhóm ảnh (logo, gia đình, ô tô, du lịch, doanh nghiệp, 
 - Lọc doanh nghiệp, mở chi tiết, chuyển đúng sản phẩm sang liên hệ.
 - Chặn số điện thoại không hợp lệ, hiển thị hướng dẫn email, menu mobile, FAQ và reduced-motion.
 - Kiểm tra font thực tế của chữ tiếng Việt bằng Chrome DevTools Protocol.
+
+## Vercel và hiệu năng
+
+- Đã tích hợp `@vercel/speed-insights/next` (v2), tải riêng sau khi khách bật **Đo hiệu năng website** trong Cài đặt cookie. Lựa chọn cũ không tự bật đo lường; URL gửi đi bỏ query và hash.
+- Trong Vercel Project → **Speed Insights**, bật tính năng nếu chưa bật, rồi triển khai commit mới. Dashboard chỉ có dữ liệu sau khi có lượt truy cập cho phép đo lường; localhost không đại diện cho hiệu năng CDN thực tế.
+- Ảnh responsive sử dụng các kích thước phù hợp với nguồn, ảnh hero được ưu tiên tải, ảnh phía dưới tải lazy. Font Manrope phục vụ nội bộ qua `next/font`.
+- Dữ liệu mô tả dài của sản phẩm ở phía server; bộ lọc và form chỉ nhận các trường cần hiển thị.
+- Kết quả kiểm tra và phạm vi đo: `docs/performance-review.md`.

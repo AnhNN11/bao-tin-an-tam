@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Icon from "../components/ui-icon";
 import ContactForm from "../components/contact-form";
 import { Breadcrumb, Eyebrow } from "../components/ui";
-import { products } from "../lib/products";
+import { products, productOptions } from "../lib/products";
 export const metadata: Metadata = { title: "Liên hệ tư vấn" };
 export default async function ContactPage({
   searchParams,
@@ -64,7 +64,7 @@ export default async function ContactPage({
               chọn là của bạn
             </div>
           </div>
-          <ContactForm key={selected} initialProduct={selected} />
+          <ContactForm products={productOptions} key={selected} initialProduct={selected} />
         </div>
       </div>
     </section>

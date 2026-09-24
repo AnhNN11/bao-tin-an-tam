@@ -177,3 +177,7 @@ export const products = [
   },
 ];
 export type Product = (typeof products)[number];
+
+// Send only card / select data to interactive components.
+export const productCards = products.map(({ slug, name, group, tone, image, desc }) => ({ slug, name, group, tone, image, desc }));
+export const productOptions = products.map(({ slug, name }) => ({ slug, name }));
