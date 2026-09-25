@@ -1,0 +1,70 @@
+/* Bảo Tín An Tâm: forest green foundations, vermilion actions, warm white space. */
+:root {
+  --brand-red: #c52530;
+  --brand-red-hover: #a51d27;
+  --brand-rose: #fff1ef;
+  --brand-green: #155b3c;
+}
+::selection { background: #f9d7d7; color: #682028; }
+.button:not(.button-white) {
+  background: linear-gradient(120deg, #b9202b, #cc2b34);
+  color: #fff;
+  border-color: #b9202b;
+}
+.button:not(.button-white):hover {
+  background: var(--brand-red-hover);
+  box-shadow: 0 7px 22px #b9202b25;
+}
+.button-white { color: #a51d27; }
+.button-white:hover { background: #fff1ef; box-shadow: 0 7px 22px #6a14231a; }
+.floating-call { background: var(--brand-red); box-shadow: 0 7px 24px #8e1b2a29; }
+.utility-bar { background: #fff5f2; }
+.utility-bar .status-dot,
+.eyebrow > span { background: #d52b35; }
+.main-nav > a.active, .main-nav > a:hover { color: #ad212b; }
+.main-nav > a.active::after { background: #d52b35; }
+.text-link svg, .product-explore svg { color: #bf2732; }
+.text-link:hover, .product-card:hover .product-explore { color: #ad212b; }
+.filter-tabs button.selected { background: #c52530; border-color: #c52530; color: #fff; }
+.filter-tabs button:focus-visible,
+.button:focus-visible { outline: 3px solid #dc7b80; }
+.reference-hero h1 span::after {
+  background: linear-gradient(90deg, #c82b36a6, #ee999b4d);
+}
+.reference-hero .status-dot { background: #ff9398; box-shadow: 0 0 0 5px #f4636c1c; }
+.gradient-surface {
+  background: radial-gradient(ellipse at 96% 0%, #fbe2df99, transparent 52%),
+    radial-gradient(ellipse at 4% 92%, #e1f3e9b3, transparent 60%), #fdfefd;
+}
+.gradient-surface::after { border-color: #d17b732b; }
+.bento-main {
+  background: radial-gradient(ellipse at 98% 10%, #ffe8e194, transparent 52%),
+    linear-gradient(135deg, #f1faf5, #e5f3eb);
+}
+.bento-kicker, .feature-index { color: #98424a; }
+.bento-side .benefit-card:first-child {
+  background: linear-gradient(115deg, #fff 52%, #fff0ed);
+  border-color: #ecd7d4;
+}
+.bento-side .benefit-card:nth-child(3) {
+  background: linear-gradient(115deg, #fff 52%, #f3f8f3);
+}
+.protection-graphic .dot-one { background: #d0333d; }
+.protection-graphic .orbit-star { color: #c8333d; }
+.protection-center { border-color: #fff3ed; }
+.product-card:hover, .story-card:hover { border-color: #ce8d8c; }
+.cta-panel {
+  background: radial-gradient(ellipse at 95% 90%, #f6d7d0, transparent 55%),
+    linear-gradient(120deg, #edf8f1, #fff9f6);
+  border-color: #e6dcd2;
+}
+.cta-orb { color: #bb534b; }
+.faq-list details[open] summary { color: #a7222c; }
+.faq-list summary > span { color: #bd2933; }
+input:focus, select:focus, textarea:focus { border-color: #b64d53; outline-color: #b64d53; }
+.site-footer { border-top: 4px solid #c52530; }
+.footer-ornament svg circle { stroke: #ffaaa5; }
+.site-footer .text-link:hover, .site-footer a:hover { color: #ffd5d1; }
+@media (max-width: 850px) {
+  .main-nav > a.active { color: #a7222c; background: #fff0ed; }
+}

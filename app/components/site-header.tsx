@@ -7,7 +7,7 @@ import Icon from "./ui-icon";
 export function Brand() {
   return (
     <Link href="/" className="brand" aria-label="Bảo Tín An Tâm - Trang chủ">
-      <Image src="/images/logo-v2.webp" alt="" width={47} height={47} />
+      <Image src="/images/logo-red-green.webp" alt="" width={47} height={47} />
       <span>
         Bảo Tín An Tâm<small>VỮNG NIỀM TIN. TRỌN AN TÂM.</small>
       </span>

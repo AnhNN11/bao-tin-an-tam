@@ -1,5 +1,11 @@
 # Image generation prompts
 
+## Red–green brand update — 25 September 2026
+
+Design one original polished minimalist logo mark for Vietnamese insurance agency Bao Tin An Tam. Premium professional identity, bold flat geometric symbol legible at 32px: a protective rounded shield made of two balanced interlocking sweeping ribbons, one deep forest green #155B3C and one confident vermilion red #DA292F. Inside, a clean ivory-negative-space sprout or person motif, with a small red circular sun. Balanced 55 percent green 45 percent red. Distinctive own identity, not the MIC logo, do not imitate MIC's radial pinwheel. No words, letters or typography. No gold, no gradients, no shadows, no mockup. Precise smooth contours, restrained modern geometry, centered compact silhouette occupies 85% of square canvas. True transparent alpha background. Single finished logo icon only.
+
+Source: exec-2d585374-30dd-4465-87f4-9ea4b1f05b95.png (1254×1254, alpha). Export: public/images/logo-red-green.webp (512px, quality 95), app/icon.png (192px), app/favicon.ico (48px). Original partner logos remain unchanged.
+
 ## Service value spot illustrations
 
 Three dedicated 3D transparent illustrations, exported at 512px WebP quality 92 with alpha preserved, for the right-hand service value cards.

@@ -4,6 +4,7 @@ import SiteHeader from "./components/site-header";
 import SiteFooter from "./components/site-footer";
 import "./globals.css";
 import "./refinements.css";
+import "./brand-theme.css";
 const font = Manrope({
   subsets: ["latin", "vietnamese"],
   weight: ["400", "500", "600", "700"],

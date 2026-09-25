@@ -41,3 +41,11 @@ Biểu mẫu tiếp tục dùng mailto như phạm vi hiện tại: chưa có ba
 - Removed the page-level animation starting at opacity 0.4, so content is fully opaque immediately on navigation.
 - Darkened secondary card text, labels, muted headings, orbit lines and nodes; strengthened card borders and footer line decoration. Increased tiny benefit labels to 10px.
 - Verified the three images decode and layouts do not overflow at 390, 768, 1024 and 1440px; inspected desktop and mobile screenshots. Lint and production build passed.
+
+## Red and green identity — 25 September 2026
+
+- Added a shared brand theme: forest green foundations, red primary actions and navigation states, and restrained blush/mint backgrounds. Partner identities remain unchanged.
+- Generated an original red/green protective shield logo and exported a transparent WebP, app icon and favicon. Kept the wordmark as live Vietnamese text.
+- Verified all 19 content routes return HTTP 200 and images decode; no horizontal overflow at 390, 768 or 1440px and no runtime exceptions. Product filtering and mobile navigation active states pass.
+- Inspected desktop and mobile home, products and contact captures. Rechecked the mobile hero after its responsive image decoded: all family faces remain visible.
+- ESLint and production build passed.
