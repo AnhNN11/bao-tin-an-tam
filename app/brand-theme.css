@@ -65,6 +65,11 @@ input:focus, select:focus, textarea:focus { border-color: #b64d53; outline-color
 .site-footer { border-top: 4px solid #c52530; }
 .footer-ornament svg circle { stroke: #ffaaa5; }
 .site-footer .text-link:hover, .site-footer a:hover { color: #ffd5d1; }
+/* Keep small labels readable on their light surfaces. */
+.site-header .brand small,
+.partner-inner > div:first-child > span,
+.filter-tabs button:not(.selected),
+.contact-form label > .optional { color: #4c6259; }
 @media (max-width: 850px) {
   .main-nav > a.active { color: #a7222c; background: #fff0ed; }
 }

@@ -57,6 +57,7 @@ export default function ProductGrid({
           >
             <div className="product-photo">
               <Image
+                quality={60}
                 src={p.image}
                 alt=""
                 fill
