@@ -5,7 +5,7 @@ export const guides = [
     category: "Lựa chọn bảo hiểm",
     readTime: 3,
     image: "/images/guide-choose.webp",
-    desc: "Ba câu hỏi giúp bạn xác định nhu cầu trước khi tìm hiểu sản phẩm.",
+    desc: "Cách xác định nhu cầu, ngân sách và phạm vi bảo vệ trước khi chọn bảo hiểm. Chuẩn bị câu hỏi về quyền lợi, loại trừ và điều kiện cùng Bảo Tín An Tâm.",
     sections: [
       {
         title: "Bạn muốn bảo vệ điều gì?",
@@ -28,7 +28,7 @@ export const guides = [
     category: "Hiểu điều khoản",
     readTime: 4,
     image: "/images/guide-contract.webp",
-    desc: "Một danh sách ngắn để cuộc trao đổi cùng tư vấn viên dễ dàng hơn.",
+    desc: "Các mục cần đọc trong hợp đồng bảo hiểm: thời hạn, quyền lợi, giới hạn, loại trừ và nghĩa vụ thông báo. Danh sách kiểm tra trước khi tham gia.",
     sections: [
       {
         title: "Thông tin và thời hạn bảo hiểm",
@@ -48,11 +48,11 @@ export const guides = [
   },
   {
     slug: "chuan-bi-ho-so-boi-thuong",
-    title: "Chuẩn bị hồ sơ: rõ từng bước, bớt bối rối",
+    title: "Hồ sơ bồi thường bảo hiểm: các bước cần chuẩn bị",
     category: "Hỗ trợ quyền lợi",
     readTime: 3,
     image: "/images/guide-claim.webp",
-    desc: "Những việc giúp bạn chủ động khi cần liên hệ nhà bảo hiểm.",
+    desc: "Hướng dẫn thông báo sự kiện, lưu giữ chứng từ và theo dõi hồ sơ bồi thường bảo hiểm. Bảo Tín An Tâm hỗ trợ kết nối đúng đầu mối của nhà bảo hiểm.",
     sections: [
       {
         title: "Thông báo đúng đầu mối",

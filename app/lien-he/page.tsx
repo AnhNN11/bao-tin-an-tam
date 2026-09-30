@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import { StaticPageSchema } from "../components/structured-data";
+import { staticMetadata } from "../lib/seo";
+export const metadata = staticMetadata("/lien-he");
 import Icon from "../components/ui-icon";
 import ContactForm from "../components/contact-form";
 import { Breadcrumb, Eyebrow } from "../components/ui";
 import { products, productOptions } from "../lib/products";
-export const metadata: Metadata = { title: "Liên hệ tư vấn" };
 export default async function ContactPage({
   searchParams,
 }: {
@@ -13,6 +14,8 @@ export default async function ContactPage({
   const slug = typeof query["san-pham"] === "string" ? query["san-pham"] : "";
   const selected = products.some((p) => p.slug === slug) ? slug : "";
   return (
+    <>
+    <StaticPageSchema path="/lien-he" />
     <section className="contact-page gradient-surface">
       <div className="container">
         <Breadcrumb current="Liên hệ tư vấn" />
@@ -28,21 +31,21 @@ export default async function ContactPage({
               Hãy bắt đầu từ điều bạn quan tâm.
             </p>
             <div className="contact-methods">
-              <a href="tel:0985775836">
+              <a href="tel:0906818357">
                 <span className="feature-icon mint">
                   <Icon name="phone" size={23} />
                 </span>
                 <span>
-                  Trò chuyện trực tiếp<strong>0985 775 836</strong>
+                  Trò chuyện trực tiếp<strong>0906 818 357</strong>
                 </span>
                 <Icon name="arrow" size={18} />
               </a>
-              <a href="mailto:baotinantam@gmail.com">
+              <a href="mailto:baotinantam.ad@gmail.com">
                 <span className="feature-icon blue">
                   <Icon name="file" size={23} />
                 </span>
                 <span>
-                  Gửi email cho chúng tôi<strong>baotinantam@gmail.com</strong>
+                  Gửi email cho chúng tôi<strong>baotinantam.ad@gmail.com</strong>
                 </span>
                 <Icon name="arrow" size={18} />
               </a>
@@ -68,5 +71,6 @@ export default async function ContactPage({
         </div>
       </div>
     </section>
+    </>
   );
 }

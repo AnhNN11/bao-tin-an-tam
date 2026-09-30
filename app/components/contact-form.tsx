@@ -21,7 +21,7 @@ export default function ContactForm({
           products.find((p) => p.slug === topic)?.name ??
           "Cần tư vấn lựa chọn phù hợp";
         const body = `Xin chào Bảo Tín An Tâm,\nTôi là: ${data.get("name")}\nSố điện thoại: ${data.get("phone")}\nNhu cầu: ${product}\nLời nhắn: ${data.get("message") || "Mong được tư vấn thêm."}`;
-        window.location.href = `mailto:baotinantam@gmail.com?subject=${encodeURIComponent("Yêu cầu tư vấn - " + product)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:baotinantam.ad@gmail.com?subject=${encodeURIComponent("Yêu cầu tư vấn - " + product)}&body=${encodeURIComponent(body)}`;
         setPrepared(true);
       }}
     >
@@ -91,8 +91,8 @@ export default function ContactForm({
       {prepared && (
         <p className="form-status" role="status">
           Đã yêu cầu mở ứng dụng email với nội dung của bạn. Nếu thiết bị chưa
-          cài email, hãy gọi 0985 775 836 hoặc gửi thư tới
-          baotinantam@gmail.com.
+          cài email, hãy gọi 0906 818 357 hoặc gửi thư tới
+          baotinantam.ad@gmail.com.
         </p>
       )}
     </form>

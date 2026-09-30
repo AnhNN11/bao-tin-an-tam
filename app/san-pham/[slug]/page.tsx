@@ -1,3 +1,5 @@
+import { pageMetadata } from "../../lib/seo";
+import { PageSchema } from "../../components/structured-data";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,8 +17,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const p = products.find((p) => p.slug === slug);
-  return { title: p?.name ?? "Không tìm thấy sản phẩm", description: p?.desc };
+  const item = products.find((item) => item.slug === slug);
+  if (!item) notFound();
+  return pageMetadata(item.name, item.intro, `/san-pham/${slug}`, item.image, false);
 }
 export default async function ProductPage({
   params,
@@ -28,6 +31,7 @@ export default async function ProductPage({
   if (!p) notFound();
   return (
     <>
+      <PageSchema path={`/san-pham/${slug}`} title={p.name} description={p.desc} image={p.image} parent={{ path: "/san-pham", title: "Giải pháp bảo hiểm" }} service />
       <section className={`detail-hero tone-${p.tone}`}>
         <div className="container">
           <Breadcrumb
@@ -40,13 +44,8 @@ export default async function ProductPage({
                 <Icon name={p.icon} size={20} />
                 {p.name}
               </div>
-              <h1>
-                {p.headline.split("\n").map((line, i) => (
-                  <span key={line} className={i ? "gradient-text" : ""}>
-                    {line} <br />
-                  </span>
-                ))}
-              </h1>
+              <h1>{p.name}</h1>
+              <p className="gradient-text">{p.headline.replace("\n", " ")}</p>
               <p>{p.desc}</p>
               <Link className="button" href={`/lien-he?san-pham=${p.slug}`}>
                 Tư vấn giải pháp này <Icon name="arrow" size={18} />

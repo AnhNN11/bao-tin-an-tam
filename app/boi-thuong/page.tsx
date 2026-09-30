@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import { StaticPageSchema } from "../components/structured-data";
+import { staticMetadata } from "../lib/seo";
+export const metadata = staticMetadata("/boi-thuong");
 import Icon from "../components/ui-icon";
 import { Breadcrumb, CTA, Eyebrow, FAQ } from "../components/ui";
-export const metadata: Metadata = { title: "Hỗ trợ bồi thường" };
 export default function ClaimsPage() {
   return (
     <>
+      <StaticPageSchema path="/boi-thuong" />
       <section className="page-intro gradient-surface">
         <div className="container">
           <Breadcrumb current="Hỗ trợ bồi thường" />
@@ -17,9 +19,9 @@ export default function ClaimsPage() {
             Chúng tôi giúp bạn hiểu bước tiếp theo, <br />
             chuẩn bị hồ sơ và kết nối với nhà bảo hiểm.
           </p>
-          <a className="button" href="tel:0985775836">
+          <a className="button" href="tel:0906818357">
             <Icon name="phone" size={18} />
-            Gọi hỗ trợ: 0985 775 836
+            Gọi hỗ trợ: 0906 818 357
           </a>
         </div>
       </section>

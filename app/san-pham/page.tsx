@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
+import { StaticPageSchema } from "../components/structured-data";
+import { staticMetadata } from "../lib/seo";
+export const metadata = staticMetadata("/san-pham");
 import Image from "next/image";
 import { productCards } from "../lib/products";
 import ProductGrid from "../components/product-grid";
 import { CTA, Eyebrow, FAQ } from "../components/ui";
-export const metadata: Metadata = { title: "Giải pháp bảo hiểm" };
 export default function ProductsPage() {
   return (
     <>
+      <StaticPageSchema path="/san-pham" />
       <section className="photo-page-hero services-hero">
         <Image
           src="/images/consultation.webp"
@@ -108,7 +110,7 @@ export default function ProductsPage() {
               },
               {
                 q: "Sau khi tham gia, tôi cần hỗ trợ thì liên hệ ai?",
-                a: "Bạn có thể gọi Bảo Tín An Tâm theo số 0985 775 836 để được hướng dẫn kết nối. Với sự kiện bảo hiểm, đồng thời thực hiện thông báo theo kênh và thời hạn ghi trong hợp đồng.",
+                a: "Bạn có thể gọi Bảo Tín An Tâm theo số 0906 818 357 để được hướng dẫn kết nối. Với sự kiện bảo hiểm, đồng thời thực hiện thông báo theo kênh và thời hạn ghi trong hợp đồng.",
               },
             ]}
           />

@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import { StaticPageSchema } from "../components/structured-data";
+import { staticMetadata } from "../lib/seo";
+export const metadata = staticMetadata("/cau-chuyen");
 import Image from "next/image";
 import StoryGrid from "../components/story-grid";
 import { CTA, Eyebrow } from "../components/ui";
-export const metadata: Metadata = {
-  title: "Góc an tâm - Những tình huống bảo vệ",
-};
 export default function StoriesPage() {
   return (
     <>
+      <StaticPageSchema path="/cau-chuyen" />
       <section className="photo-page-hero">
         <Image
           src="/images/consultation.webp"

@@ -49,9 +49,9 @@ export function CTA() {
             <Link className="button" href="/lien-he">
               Bắt đầu trò chuyện <Icon name="arrow" size={18} />
             </Link>
-            <a href="tel:0985775836">
+            <a href="tel:0906818357">
               <Icon name="phone" size={17} />
-              0985 775 836
+              0906 818 357
             </a>
           </div>
         </div>

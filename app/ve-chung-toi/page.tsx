@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
+import { StaticPageSchema } from "../components/structured-data";
+import { staticMetadata } from "../lib/seo";
+export const metadata = staticMetadata("/ve-chung-toi");
 import Image from "next/image";
 import Icon from "../components/ui-icon";
 import ProtectionGraphic from "../components/protection-graphic";
 import { Breadcrumb, CTA, Eyebrow } from "../components/ui";
-export const metadata: Metadata = { title: "Về chúng tôi" };
 export default function AboutPage() {
   return (
     <>
+      <StaticPageSchema path="/ve-chung-toi" />
       <section className="page-intro about-intro gradient-surface">
         <div className="container">
           <Breadcrumb current="Về chúng tôi" />

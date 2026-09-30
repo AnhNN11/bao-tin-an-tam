@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
+import { StaticPageSchema } from "../components/structured-data";
+import { staticMetadata } from "../lib/seo";
+export const metadata = staticMetadata("/cam-nang");
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "../components/ui-icon";
 import { Breadcrumb, CTA, Eyebrow } from "../components/ui";
 import { guides } from "../lib/guides";
-export const metadata: Metadata = { title: "Cẩm nang bảo hiểm" };
 export default function GuidesPage() {
   return (
     <>
+      <StaticPageSchema path="/cam-nang" />
       <section className="page-intro gradient-surface">
         <div className="container">
           <Breadcrumb current="Cẩm nang bảo hiểm" />

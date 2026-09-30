@@ -39,8 +39,8 @@ export default function SiteFooter() {
             </div>
             <div>
               <h3>Kết nối với chúng tôi</h3>
-              <a href="tel:0985775836">0985 775 836</a>
-              <a href="mailto:baotinantam@gmail.com">baotinantam@gmail.com</a>
+              <a href="tel:0906818357">0906 818 357</a>
+              <a href="mailto:baotinantam.ad@gmail.com">baotinantam.ad@gmail.com</a>
               <p>
                 750/9/9A Nguyễn Kiệm, Phường Đức Nhuận, <br />
                 Thành phố Hồ Chí Minh, Việt Nam
@@ -57,7 +57,7 @@ export default function SiteFooter() {
       </footer>
       <a
         className="floating-call"
-        href="tel:0985775836"
+        href="tel:0906818357"
         aria-label="Gọi Bảo Tín An Tâm"
       >
         <Icon name="phone" size={21} />

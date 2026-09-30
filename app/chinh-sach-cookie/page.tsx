@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import { StaticPageSchema } from "../components/structured-data";
+import { staticMetadata } from "../lib/seo";
+export const metadata = staticMetadata("/chinh-sach-cookie");
 import Link from "next/link";
 import { Breadcrumb, Eyebrow } from "../components/ui";
 
-export const metadata: Metadata = { title: "Chính sách cookie" };
 export default function CookiePolicy() {
   return <>
+      <StaticPageSchema path="/chinh-sach-cookie" />
     <section className="page-intro gradient-surface"><div className="container"><Breadcrumb current="Chính sách cookie" /><Eyebrow>MINH BẠCH & TÔN TRỌNG</Eyebrow><h1>Quyền riêng tư của bạn.</h1><p>Thông tin rõ ràng. Lựa chọn trong tay bạn.</p></div></section>
     <section className="section"><article className="container reading-content cookie-policy">
       <p>Cập nhật ngày 24/09/2026 · Phiên bản 2</p>
@@ -26,7 +28,7 @@ export default function CookiePolicy() {
       <p>Khi mở liên kết MIC, PVI hoặc ứng dụng email, chính sách của dịch vụ đó áp dụng. Chính sách này chỉ mô tả lưu trữ trong trình duyệt của website; không thay thế thông tin về xử lý hồ sơ bảo hiểm hoặc nhật ký kỹ thuật của đơn vị vận hành máy chủ.</p>
       <h2>6. Liên hệ về quyền riêng tư</h2>
       <p>CÔNG TY TNHH BẢO TÍN AN TÂM · Mã số doanh nghiệp 0319574619.<br />750/9/9A Nguyễn Kiệm, Phường Đức Nhuận, Thành phố Hồ Chí Minh.</p>
-      <p>Gửi yêu cầu liên quan đến dữ liệu tới <a href="mailto:baotinantam@gmail.com">baotinantam@gmail.com</a> hoặc gọi <a href="tel:0985775836">0985 775 836</a>.</p>
+      <p>Gửi yêu cầu liên quan đến dữ liệu tới <a href="mailto:baotinantam.ad@gmail.com">baotinantam.ad@gmail.com</a> hoặc gọi <a href="tel:0906818357">0906 818 357</a>.</p>
       <p><Link href="/lien-he" className="text-link">Liên hệ Bảo Tín An Tâm →</Link></p>
     </article></section>
   </>;

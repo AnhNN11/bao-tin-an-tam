@@ -34,9 +34,9 @@ export default function SiteHeader() {
           <span>
             <span className="status-dot" /> Điểm tựa cho những điều quan trọng
           </span>
-          <a href="tel:0985775836">
+          <a href="tel:0906818357">
             <Icon name="phone" size={13} />
-            0985 775 836
+            0906 818 357
           </a>
         </div>
       </div>

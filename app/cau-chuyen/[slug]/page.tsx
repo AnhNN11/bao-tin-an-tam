@@ -1,3 +1,5 @@
+import { pageMetadata } from "../../lib/seo";
+import { PageSchema } from "../../components/structured-data";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +18,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  return { title: stories.find((s) => s.slug === slug)?.title ?? "Góc an tâm" };
+  const item = stories.find((item) => item.slug === slug);
+  if (!item) notFound();
+  return pageMetadata(item.title, item.desc, `/cau-chuyen/${slug}`, item.image, false);
 }
 export default async function StoryDetail({
   params,
@@ -29,10 +33,11 @@ export default async function StoryDetail({
   const p = products.find((p) => p.slug === s.product)!;
   return (
     <>
+      <PageSchema path={`/cau-chuyen/${slug}`} title={s.title} description={s.desc} image={s.image} parent={{ path: "/cau-chuyen", title: "Góc an tâm" }} />
       <section className="page-intro gradient-surface">
         <div className="container">
           <Breadcrumb
-            current={s.category}
+            current={s.title}
             parent={{ href: "/cau-chuyen", label: "Góc an tâm" }}
           />
           <Eyebrow>{s.category.toUpperCase()}</Eyebrow>

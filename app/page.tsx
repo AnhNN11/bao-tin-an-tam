@@ -1,3 +1,5 @@
+import { staticMetadata } from "./lib/seo";
+export const metadata = staticMetadata("/");
 import Image from "next/image";
 import { productCards, productOptions } from "./lib/products";
 import HeroPicture from "./components/hero-picture";
